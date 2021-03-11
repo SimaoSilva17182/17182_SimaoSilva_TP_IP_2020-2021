@@ -1,19 +1,19 @@
 #BlueJ class context
 comment0.target=FileTools
-comment0.text=\n\ Just\ utility\ methods\ to\ read\ a\ csv\ file\ to\ an\ array\ or\ array\ of\ arrays\n\ @author\ Jo\u00E3o\ Paulo\ barros\n\ @version\ 2021-02-01\n
+comment0.text=\r\n\ Just\ utility\ methods\ to\ read\ a\ csv\ file\ to\ an\ array\ or\ array\ of\ arrays\r\n\ @author\ Jo\u00E3o\ Paulo\ barros\r\n\ @version\ 2021-02-01\r\n
 comment1.params=filename
 comment1.target=java.lang.String[]\ readFileToStringArray(java.lang.String)
-comment1.text=\n\ read\ all\ lines\ to\ one\ array\ of\ Strings\n\n\ @param\ filename\ file\ to\ read\n\ @return\ array\ with\ one\ line\ in\ each\ position\n\ \ \ \ \ \ \ \ \ or\ empty\ array\ if\ error\ reading\ file\n
+comment1.text=\r\n\ read\ all\ lines\ to\ one\ array\ of\ Strings\r\n\r\n\ @param\ filename\ file\ to\ read\r\n\ @return\ array\ with\ one\ line\ in\ each\ position\r\n\ \ \ \ \ \ \ \ \ or\ empty\ array\ if\ error\ reading\ file\r\n
 comment2.params=filename\ separator
 comment2.target=java.lang.String[][]\ readFileToStringArray2D(java.lang.String,\ java.lang.String)
-comment2.text=\n\ read\ all\ lines\ to\ one\ array\ of\ arrays\ of\ Strings\n\n\ @param\ filename\ \ file\ to\ read\n\ @param\ separator\ separator\ for\ tokens\ in\ each\ line\n\ @return\ array\ with\ one\ array\ of\ tokens\ in\ each\ position\n\ \ \ \ \ \ \ \ \ or\ empty\ array\ if\ error\ reading\ file\n
+comment2.text=\r\n\ read\ all\ lines\ to\ one\ array\ of\ arrays\ of\ Strings\r\n\r\n\ @param\ filename\ \ file\ to\ read\r\n\ @param\ separator\ separator\ for\ tokens\ in\ each\ line\r\n\ @return\ array\ with\ one\ array\ of\ tokens\ in\ each\ position\r\n\ \ \ \ \ \ \ \ \ or\ empty\ array\ if\ error\ reading\ file\r\n
 comment3.params=filename\ lines
 comment3.target=void\ writeFile(java.lang.String,\ java.lang.String[])
-comment3.text=\n\ write\ array\ contents\ to\ given\ text\ file\n\ @param\ filename\ file\ where\ array\ content\ will\ be\ written\n\ @param\ lines\ line\ to\ be\ written\n
+comment3.text=\r\n\ write\ array\ contents\ to\ given\ text\ file\r\n\ @param\ filename\ file\ where\ array\ content\ will\ be\ written\r\n\ @param\ lines\ line\ to\ be\ written\r\n
 comment4.params=filename
 comment4.target=java.lang.String\ readFirstLine(java.lang.String)
-comment4.text=\n\ read\ first\ line\ of\ given\ file\n\ @param\ filename\ file\ to\ read\n
+comment4.text=\r\n\ read\ first\ line\ of\ given\ file\r\n\ @param\ filename\ file\ to\ read\r\n
 comment5.params=message
 comment5.target=void\ showError(java.lang.String)
-comment5.text=\n\ show\ simple\ error\ message\ in\ a\ modal\ dialog\n\ @param\ message\ message\ to\ be\ presented\ to\ the\ user\n
+comment5.text=\r\n\ show\ simple\ error\ message\ in\ a\ modal\ dialog\r\n\ @param\ message\ message\ to\ be\ presented\ to\ the\ user\r\n
 numComments=6

@@ -26,13 +26,16 @@ public class Operations extends GUIBase {
         addCommand("e2PopulationTotalInYear", this::E2PopulationTotalInYear);
         addCommand("e3AllCitiesInYear", this::E3AllCitiesInYear);
         addCommand("e4CountryPopulation", this::E4ChartCountryPopulation);
+        addCommand("e5AllCitiesDataInYear", this::E5AllCitiesData);
+        addCommand("ne1DeathsPerContinent", this::NE1DeathsPerContinent);
+        
         // TODO adicionar mais linhas com entradas de menu e
         //  nomes de métodos void sem parâmetros
 
         launch();
     }
     // TODO  adicionar métodos void sem parâmetros
-        private void E1BiggestPopulationCity() {
+    private void E1BiggestPopulationCity() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Biggest populated City");
         alert.setHeaderText("The biggest populated City is?");
@@ -106,10 +109,19 @@ public class Operations extends GUIBase {
         Optional<String> result = dialog.showAndWait();
         resultYear = Integer.parseInt(result.get());
         City[] city = MyFileTools.e5AllCitiesDataInYear(resultYear);
-        //CityBar cityBar = new CityBar(city);
-        
+        CitiesChart citiesChart = new CitiesChart(city);
+        pane.getChildren().add(citiesChart);         
     }
-
+    
+    private void NE1DeathsPerContinent(){
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Insert Date");
+        dialog.setHeaderText("Insert Date");
+        dialog.setContentText("Please enter a date in the following formate AAAA-MM-DD:");
+        String date = ""; 
+        Optional<String> result = dialog.showAndWait();
+        date = (result.get());
+    }
 
     private void drawLine() {
         // https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/Line.html

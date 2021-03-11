@@ -12,14 +12,15 @@ public class CitiesChart extends javafx.scene.Group
     public CitiesChart(City[] city)
     {
         int x = 10;
-        int y = 500;
-        int width = 20;        
+        int y = 800;
+        int width = 50;        
         for(int i = 0; i < city.length; i++){
-            int height = city[i].population;
+            int height = city[i].getPopulation();
             
             CityBar cityBar = new CityBar(city[i], x, y, width, height);
             
             x = x + 2 * width;
+            this.getChildren().add(cityBar);
         }
     }
 }

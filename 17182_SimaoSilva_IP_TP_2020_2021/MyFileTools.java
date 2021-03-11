@@ -28,6 +28,7 @@ public class MyFileTools {
     public static String filename = "datafiles/cities.txt";
     public static String separator = ",";
     public static String filename2 = "datafiles/countries.txt";
+    public static String filename3 = "datafiles/owid-covid-data.txt";
     /**
      * test for method readFileToStringArray
      * @param filename csv file to read
@@ -182,4 +183,7 @@ public class MyFileTools {
         }
         return citiesInYear;
     }
+    
+    /*public static double[] ne1DeathsPerContinent(String date){
+    }*/
 }
