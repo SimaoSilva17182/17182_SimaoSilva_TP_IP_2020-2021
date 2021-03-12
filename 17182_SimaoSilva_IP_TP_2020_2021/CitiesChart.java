@@ -1,14 +1,11 @@
 /**
- * Escreva a descrição da classe CitiesChart aqui.
+ * Class that creates a chart of cities. This class calls the class CityBar class to create various bars of cities making them the city chart
  * 
- * @author (seu nome) 
- * @version (número de versão ou data)
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
 public class CitiesChart extends javafx.scene.Group
 {
-    /**
-     * COnstrutor para objetos da classe CitiesChart
-     */
     public CitiesChart(City[] city)
     {
         int x = 10;

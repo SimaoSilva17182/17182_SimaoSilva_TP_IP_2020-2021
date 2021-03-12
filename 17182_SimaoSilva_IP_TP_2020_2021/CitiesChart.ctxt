@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.target=CitiesChart
-comment0.text=\r\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ CitiesChart\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n
+comment0.text=\r\n\ Class\ that\ creates\ a\ chart\ of\ cities.\ This\ class\ calls\ the\ class\ CityBar\ class\ to\ create\ various\ bars\ of\ cities\ making\ them\ the\ city\ chart\r\n\ \r\n\ @author\ Sim\u00E3o\ Silva\ 17182\r\n\ @version\ 12-03-2021\r\n
 comment1.params=city
 comment1.target=CitiesChart(City[])
-comment1.text=\r\n\ COnstrutor\ para\ objetos\ da\ classe\ CitiesChart\r\n
 numComments=2

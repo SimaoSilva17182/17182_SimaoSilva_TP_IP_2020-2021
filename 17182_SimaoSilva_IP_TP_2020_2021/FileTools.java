@@ -10,12 +10,11 @@ import java.util.List;
 
 /**
  * Just utility methods to read a csv file to an array or array of arrays
- * @author João Paulo barros
- * @version 2021-02-01
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
 public class FileTools {
     public static final String EOL = System.getProperty("line.separator");
-
     /**
      * read all lines to one array of Strings
      *

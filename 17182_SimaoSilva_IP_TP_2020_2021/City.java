@@ -1,18 +1,12 @@
 import java.util.*;
 
-/** Este template foi criado na 
- * Escola Superior de Tecnologia e Gestão do
- * Instituto PolitÈcnico de Beja
- * em 2016/09/29
- * -----------------------------------------------------
- * Adicione aqui uma descrição da classe, o seu nome e a data
- * @author (o seu nome) 
- * @version (número de versão ou data)
+/** 
+ * Classe that operates has a city object
  * 
- * O programa deve ser escrito em inglês.
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
-public class City
-{
+public class City{
     private String city;
     private String countryName;
     private int population;
@@ -24,19 +18,19 @@ public class City
         this.population = population;
         this.region = region;
     }
-    
+
     public String getCity(){
         return city;
     }
-    
+
     public String getCountryName(){ 
         return countryName;
     }
-    
+
     public int getPopulation(){
         return population;
     }
-    
+
     public String getRegion(){
         return region;
     }

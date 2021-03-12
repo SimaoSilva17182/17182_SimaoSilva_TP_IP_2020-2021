@@ -1,15 +1,12 @@
 import javafx.scene.shape.Line;
 /**
- * Escreva a descrição da classe CountryPopulationChart aqui.
+ * Classe that creates a chart of lines where the lines are equal to the population of the given country
  * 
- * @author (seu nome) 
- * @version (número de versão ou data)
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
 public class CountryPopulationChart extends javafx.scene.Group
 {
-    /**
-     * COnstrutor para objetos da classe CountryPopulationChart
-     */
     public CountryPopulationChart(int[] countryPopulation)
     {
         int x = 10;

@@ -4,16 +4,13 @@ import javafx.scene.text.Font;
 import javafx.scene.paint.Color;
 import javafx.scene.*;
 /**
- * Escreva a descrição da classe CityBar aqui.
+ * Classe that creates a bar and text with (city, countryName, region) below the bar and with the population above the bar
  * 
- * @author (seu nome) 
- * @version (número de versão ou data)
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
-public class CityBar extends Group
+public class CityBar extends javafx.scene.Group
 {
-    /**
-     * COnstrutor para objetos da classe CityBar
-     */
     public CityBar(City city , int x, int y , int width, int height) 
     {
         Rectangle rect = new Rectangle(x, y - height, width, height);

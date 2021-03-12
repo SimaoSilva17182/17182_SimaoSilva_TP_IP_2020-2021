@@ -3,32 +3,33 @@ import java.util.Arrays;
 /**
  * Examples using the utility methods in FileUtils class
  * This file has its own main method, so it can be used for autonomous testing
- * @author João Paulo barros
- * @version 2021-02-01
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
 public class MyFileTools {
-
+    private String filename = "datafiles/cities.txt";
+    private String separator = ",";
+    private String filename2 = "datafiles/countries.txt";
+    private String filename3 = "datafiles/owid-covid-data.txt";
     /**
      * mian method for testing
      * @param args command line arguments
      */
     public static void main(String[] args) {
         //testReadFileToStringArray("datafiles/cities.txt");
-        //testReadFileToStringArray2D("datafiles/cities.txt", ",");
-        //writeCityPopulation("datafiles/cities.txt", ",", "Beijing");
-        //int[] cityPopulation = getCityPopulation("datafiles/cities.txt", ",", "Beijing");
-        //System.out.println(Arrays.toString(cityPopulation));
-        //System.out.println(e1BiggestPopulationCity("datafiles/cities.txt", ","));
-        //System.out.println(e2PopulationTotalInYear(1500));
-        //System.out.println(e3AllCitiesInYear(1502).length);
-        //System.out.print(e4CountryPopulation("Portugal")[0]);
-        //System.out.println(e5AllCitiesDataInYear(1500)[0]);
-
+        testReadFileToStringArray2D("datafiles/cities.txt", ",");
+        writeCityPopulation("datafiles/cities.txt", ",", "Beijing");
+        int[] cityPopulation = getCityPopulation("datafiles/cities.txt", ",", "Beijing");       
     }
-    public static String filename = "datafiles/cities.txt";
-    public static String separator = ",";
-    public static String filename2 = "datafiles/countries.txt";
-    public static String filename3 = "datafiles/owid-covid-data.txt";
+
+    public MyFileTools(String filename, String separator, String filename2, String filename3)
+    {
+        this.filename = filename;
+        this.separator = separator;
+        this.filename2 = filename2;
+        this.filename3 = filename3;
+    }
+
     /**
      * test for method readFileToStringArray
      * @param filename csv file to read
@@ -107,9 +108,12 @@ public class MyFileTools {
         }
         return total;
     }
-    
-        public static String e1BiggestPopulationCity(String filename, String separator) {
-        String[][] cities = FileTools.readFileToStringArray2D(filename, separator);
+
+    /** get the city with the biggest population
+     * @return a string with the name of the city with the biggets population and that same population
+     */
+    public String e1BiggestPopulationCity() {
+        String[][] cities = FileTools.readFileToStringArray2D(this.filename, this.separator);
         int getCityPopulation = 0;
         String cityName = "";       
         int[] cityPopulation = new int[getCityPopulation];
@@ -125,7 +129,11 @@ public class MyFileTools {
         return cityName + " " + getCityPopulation;
     }
 
-    public static long e2PopulationTotalInYear(int year) {
+    /** get the total population for the given year
+     *  @param year that is given by the user
+     *  @return the total population
+     */
+    public long e2PopulationTotalInYear(int year) {
         String[][] cities = FileTools.readFileToStringArray2D(filename, separator);
         long cityPopulation = 0;
         for(int line = 0; line < cities.length; line++){
@@ -136,7 +144,11 @@ public class MyFileTools {
         return cityPopulation;
     }
 
-    public static String[] e3AllCitiesInYear(int year) {
+    /** get all the cities in the given year 
+     *  @param year that is given by the user
+     *  @return string array with all the cities
+     */
+    public String[] e3AllCitiesInYear(int year) {
         String[][] cities = FileTools.readFileToStringArray2D(filename, separator);
         String cityName = "";
         int city = 0;
@@ -150,7 +162,11 @@ public class MyFileTools {
         return citiesInYear;
     }
 
-    public static int[] e4CountryPopulation(String countryName) {
+    /** get every instance of the population for the given countryName 
+     *  @param countryName that is given by the user
+     *  @return a array with every instance of the population
+     */
+    public int[] e4CountryPopulation(String countryName) {
         String[][] cities = FileTools.readFileToStringArray2D(filename2, separator);                   
         String country = "";
         for(int line = 0; line < cities.length; line++){
@@ -166,7 +182,11 @@ public class MyFileTools {
         return countryPopulation;
     }
 
-    public static City[] e5AllCitiesDataInYear(int year) {
+    /** get a city array with the city, the country, the population and the region for the given year
+     *  @param year that is given by the user
+     *  @return a array with the city, the country, the population and the region
+     */
+    public City[] e5AllCitiesDataInYear(int year) {
         String[][] cities = FileTools.readFileToStringArray2D(filename, separator);        
         String country = "";
         for(int line = 0; line < cities.length; line++){
@@ -183,7 +203,27 @@ public class MyFileTools {
         }
         return citiesInYear;
     }
-    
-    /*public static double[] ne1DeathsPerContinent(String date){
-    }*/
+
+    /** get a array with the sum of all the deaths of a continent for the given date
+     *  @param date that is given by the user
+     *  @return a array with all the deaths of a continent
+     */
+    public double[] ne1DeathsPerContinent(String date){
+        String[][] cities = FileTools.readFileToStringArray2D(filename3, separator); 
+        String[] continent =  {"Europe", "Asia", "Oceania", "North America", "South America", "Africa", ""};
+        double[] deaths = new double[continent.length];
+        for(int i = 0; i < continent.length; i++){            
+            for(int line = 0; line <cities.length; line++){            
+                if(cities[line].length > 2 && cities[line][3].equals(date) && continent[i].equals(cities[line][1])){
+                    double totalDeaths = 0.0;
+                    if(!cities[line][7].isEmpty()){
+                        totalDeaths = Double.parseDouble(cities[line][7]);
+                    }                   
+                    deaths[i] = deaths[i] + totalDeaths;
+                }
+            }
+        }        
+        return deaths;
+    }
 }
+

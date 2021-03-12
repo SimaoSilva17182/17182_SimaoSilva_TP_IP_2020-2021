@@ -17,11 +17,10 @@ import java.util.Map;
 
 /**
  * Base class for actions
- * @author Joao Paulo Barros
- * @version 2021-02-01
+ * @author Simão Silva 17182
+ * @version 12-03-2021
  */
 public class GUIBase extends Application {
-
     protected Pane pane;
     private TextField fileNameTextField;
     private Map<String, Runnable> actions;

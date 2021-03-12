@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GUIBase
-comment0.text=\r\n\ Base\ class\ for\ actions\r\n\ @author\ Joao\ Paulo\ Barros\r\n\ @version\ 2021-02-01\r\n
+comment0.text=\r\n\ Base\ class\ for\ actions\r\n\ @author\ Sim\u00E3o\ Silva\ 17182\r\n\ @version\ 12-03-2021\r\n
 comment1.params=args
 comment1.target=GUIBase(java.lang.String[])
 comment1.text=\r\n\ @param\ args\ can\ have\ an\ action\ name\r\n

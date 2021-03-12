@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=FileTools
-comment0.text=\r\n\ Just\ utility\ methods\ to\ read\ a\ csv\ file\ to\ an\ array\ or\ array\ of\ arrays\r\n\ @author\ Jo\u00E3o\ Paulo\ barros\r\n\ @version\ 2021-02-01\r\n
+comment0.text=\r\n\ Just\ utility\ methods\ to\ read\ a\ csv\ file\ to\ an\ array\ or\ array\ of\ arrays\r\n\ @author\ Sim\u00E3o\ Silva\ 17182\r\n\ @version\ 12-03-2021\r\n
 comment1.params=filename
 comment1.target=java.lang.String[]\ readFileToStringArray(java.lang.String)
 comment1.text=\r\n\ read\ all\ lines\ to\ one\ array\ of\ Strings\r\n\r\n\ @param\ filename\ file\ to\ read\r\n\ @return\ array\ with\ one\ line\ in\ each\ position\r\n\ \ \ \ \ \ \ \ \ or\ empty\ array\ if\ error\ reading\ file\r\n

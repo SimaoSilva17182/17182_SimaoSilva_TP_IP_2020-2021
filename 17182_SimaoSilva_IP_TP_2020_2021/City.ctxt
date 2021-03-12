@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=City
-comment0.text=\ Este\ template\ foi\ criado\ na\ \r\n\ Escola\ Superior\ de\ Tecnologia\ e\ Gest\u00E3o\ do\r\n\ Instituto\ Polit\u00C8cnico\ de\ Beja\r\n\ em\ 2016/09/29\r\n\ -----------------------------------------------------\r\n\ Adicione\ aqui\ uma\ descri\u00E7\u00E3o\ da\ classe,\ o\ seu\ nome\ e\ a\ data\r\n\ @author\ (o\ seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n\ \r\n\ O\ programa\ deve\ ser\ escrito\ em\ ingl\u00EAs.\r\n
+comment0.text=\ \r\n\ Classe\ that\ operates\ has\ a\ city\ object\r\n\ \r\n\ @author\ Sim\u00E3o\ Silva\ 17182\r\n\ @version\ 12-03-2021\r\n
 comment1.params=city\ countryName\ population\ region
 comment1.target=City(java.lang.String,\ java.lang.String,\ int,\ java.lang.String)
 comment2.params=
